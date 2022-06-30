@@ -11,7 +11,7 @@
           width="40"
         />
       </div>
-      <v-toolbar-title class="caption"> Voice recorder </v-toolbar-title>
+      <v-toolbar-title class="caption"> Voice recorder PBL5 </v-toolbar-title>
     </v-app-bar>
     <v-main>
       <div class="container">
@@ -103,7 +103,10 @@ export default {
             body: this.currentFile,
           }
         )
-          .then(() => (this.success = true))
+          .then(() => {
+            this.success = true;
+            this.currentFile = null;
+          })
           .catch(() => (this.error = true));
       }
     },
