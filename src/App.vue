@@ -108,6 +108,8 @@ export default {
             this.currentFile = null;
           })
           .catch(() => (this.error = true));
+      } else {
+        this.error = true;
       }
     },
     select(data) {
@@ -129,5 +131,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 }
 </style>
